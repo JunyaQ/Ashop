@@ -2,6 +2,7 @@ import React from 'react';
 import { useQuery } from '@apollo/client';
 import { QUERY_CATEGORIES } from '../../utils/queries';
 
+// keeps track of category list from apollo query
 function CategoryMenu({ setCategory }) {
   const { data: categoryData } = useQuery(QUERY_CATEGORIES);
   const categories = categoryData?.categories || [];
